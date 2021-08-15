@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c498483e5e9b702875a72c997729431",
+    "content-hash": "0bab2d90e914fed15d55bcb4e27b08c7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,56 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
             "time": "2021-03-11T06:42:03+00:00"
+        },
+        {
+            "name": "bluesourcery/prescription",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mazagu/prescriptions.git",
+                "reference": "4236af86b100b0ebdf8835fe4a3dd097f7c88acf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mazagu/prescriptions/zipball/4236af86b100b0ebdf8835fe4a3dd097f7c88acf",
+                "reference": "4236af86b100b0ebdf8835fe4a3dd097f7c88acf",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "6.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bluesourcery\\Prescription\\PrescriptionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bluesourcery\\Prescription\\": "src",
+                    "Bluesourcery\\Prescription\\Tests\\": "tests",
+                    "Bluesourcery\\Prescription\\Database\\Factories\\": "database\\factories"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mario Zabala",
+                    "email": "mario@bluesourcery.com"
+                }
+            ],
+            "description": "Medical prescription package",
+            "support": {
+                "source": "https://github.com/Mazagu/prescriptions/tree/main",
+                "issues": "https://github.com/Mazagu/prescriptions/issues"
+            },
+            "time": "2021-08-15T10:54:43+00:00"
         },
         {
             "name": "brick/math",
@@ -7737,7 +7787,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "bluesourcery/prescription": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
