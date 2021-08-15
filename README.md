@@ -27,7 +27,7 @@ Start your server. For example:
 php artisan serve
 ```
 Create a new user and save username/password to generate the token needed to authenticate.
-
+The most straightforward way to test the API is importing the postman collections, placed in the **postman** folder, to your Postman project. To learn more about Postman visit https://www.postman.com/
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
