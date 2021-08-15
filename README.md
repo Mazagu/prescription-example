@@ -1,6 +1,33 @@
 # Prescription-package example application
 Basic Laravel application setup implementing **Bluesourcery/Prescription** package and **Laravel/Sanctum**.
 Learn more about prescription's package in https://github.com/Mazagu/prescriptions/
+### Install
+Install all dependencies
+```
+composer update
+```
+Configure database connection in the **.env** file. SQLITE configuration example:
+```
+DB_CONNECTION=sqlite
+DATABASE_URL=..\..\..\database\example.sqlite
+DB_FOREIGN_KEYS=true
+DB_DATABASE=example.sqlite
+```
+Run migrations:
+```
+php artisan migrate
+```
+Generate APP KEY:
+```
+php artisan key:generate
+```
+### Use
+Start your server. For example:
+```
+php artisan serve
+```
+Create a new user and save username/password to generate the token needed to authenticate.
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
