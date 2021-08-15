@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "f5c6f181-7f6c-4f0f-8971-391d4e9a7b85",
+		"name": "Drug",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Drugs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/drug",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Drugs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/drug/filter?prescription_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drug",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "prescription_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Drug",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/drug/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drug",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Drug",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/drug?name=Green&prescription_id=2&code=1236547&posology=1 every 8 hours",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drug"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Green"
+						},
+						{
+							"key": "prescription_id",
+							"value": "2"
+						},
+						{
+							"key": "code",
+							"value": "1236547"
+						},
+						{
+							"key": "posology",
+							"value": "1 every 8 hours"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Drug",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/drug/1?name=Black&prescription_id=2&code=1234567&posology=1 every 8 hours",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drug",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Black"
+						},
+						{
+							"key": "prescription_id",
+							"value": "2"
+						},
+						{
+							"key": "code",
+							"value": "1234567"
+						},
+						{
+							"key": "posology",
+							"value": "1 every 8 hours"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Drug",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/drug/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"drug",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

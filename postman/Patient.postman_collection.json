@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "1a625a41-2442-423f-95c1-41474d11a6fc",
+		"name": "Patient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/patient",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/patient/filter?name=Kaley Leuschke",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Kaley Leuschke"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/patient/11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/patient?name=Joe&lastname=Doe&id_card=123456789",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Joe"
+						},
+						{
+							"key": "lastname",
+							"value": "Doe"
+						},
+						{
+							"key": "id_card",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Patient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/patient/11?name=Jane&lastname=Doe&id_card=123456789",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient",
+						"11"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jane"
+						},
+						{
+							"key": "lastname",
+							"value": "Doe"
+						},
+						{
+							"key": "id_card",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Patient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/patient/11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"patient",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "bbb4c9a8-957d-4974-af10-9adf03b9a168",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/sanctum/token?email=useremail@gmail.com&password=userpass&device_name=postman",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"sanctum",
+						"token"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "useremail@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "userpass"
+						},
+						{
+							"key": "device_name",
+							"value": "postman"
+						}
+					]
+				},
+				"description": "Returns a bearer authentication token given a valid user's email and password."
+			},
+			"response": []
+		}
+	]
+}
